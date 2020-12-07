@@ -1,0 +1,28 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /api
+spring:
+  application:
+    name: cloud-feign-customer-fa
+  # 微服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        # 注册中心的地址，多个注册中心使用","隔开
+        server-addr: "10.3.133.159:8848,10.3.133.159:8849,10.3.133.159:8850"
+
+# 负载均衡的配置
+# 服务端不涉及远程可以不需要配置
+feign:
+  # 使用okhttp作为底层通信框架
+  okhttp:
+    enabled: true
+  client:
+    # 针对单个feignclent配置
+    config:
+      product-client:
+        # 连接超时
+        connection-timeout: 5000
+        # 读取超时
+        read-timeout: 3000

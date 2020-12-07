@@ -1,0 +1,10 @@
+server:
+  port: 8810
+spring:
+  application:
+    name: mq-producer-fa
+rocketmq:
+  name-server: 10.3.133.161:9876
+  topic: "producer-fa"
+  producer:
+    group: "producer-fa-group"

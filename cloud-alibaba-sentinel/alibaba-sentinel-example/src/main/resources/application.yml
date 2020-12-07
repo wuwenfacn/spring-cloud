@@ -1,0 +1,23 @@
+server:
+  port: 8820
+spring:
+  application:
+    name: "sentinel-example"
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "10.3.133.159:8848,10.3.133.159:8849,10.3.133.159:8850"
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 47.111.6.167:8180
+feign:
+  # 打开okhttp
+  okhttp:
+    enabled: true
+  # 关闭httpclient
+  httpclient:
+    enabled: false
+  # 打开sentinel
+  sentinel:
+    enabled: true

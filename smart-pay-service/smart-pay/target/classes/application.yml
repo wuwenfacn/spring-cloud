@@ -1,0 +1,15 @@
+server:
+  port: 8880
+  servlet:
+    context-path: /api
+spring:
+  profiles:
+    active: dubbo
+  application:
+    name: "pay-customer-fa"
+  cloud:
+    nacos:
+      discovery:
+        namespace: "public"
+        server-addr: "114.215.196.38:8848"
+

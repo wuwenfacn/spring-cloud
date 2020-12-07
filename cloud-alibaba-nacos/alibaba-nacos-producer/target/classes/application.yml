@@ -1,0 +1,24 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: cloud-feign-producer-fa
+  # 微服务的配置信息
+  cloud:
+    nacos:
+      discovery:
+        # 注册中心的地址，多个注册中心使用","隔开
+        server-addr: "10.3.133.159:8848,10.3.133.159:8849,10.3.133.159:8850"
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/exercise?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+      username: root
+      password: root
+      max-active: 10
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml

@@ -1,0 +1,14 @@
+server:
+  port: 8881
+  servlet:
+    context-path: /api
+spring:
+  profiles:
+    active: dubbo
+  application:
+    name: "alipay-producer-fa"
+  cloud:
+    nacos:
+      discovery:
+        namespace: "public"
+        server-addr: "114.215.196.38:8848"

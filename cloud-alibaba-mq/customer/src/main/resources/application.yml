@@ -1,0 +1,7 @@
+server:
+  port: 8820
+spring:
+  application:
+    name: mq-customer-fa
+rocketmq:
+  name-server: 10.3.133.161:9876
